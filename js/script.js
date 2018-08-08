@@ -11,10 +11,8 @@ $(document).ready(function(){
     
     $('.app-box').hide(); //Hides the search box
     $('.weather-info').html('<h2 class="text-center">Loading...</h2>'); //Loading Text
-    
-    const key = '118e7c41ae94ab796d6f87993249204f';
-    const weatherURL = 'https://api.openweathermap.org/data/2.5/forecast?appid=' + key + '&q=' + city + ',' + country + '&units=imperial';
-    
+
+    let weatherURL = 'https://api.openweathermap.org/data/2.5/forecast?appid=' + key + '&q=' + city + ',' + country + '&units=imperial';
     
     $.ajax({
       url: weatherURL,
